@@ -1,8 +1,8 @@
 """Validation checks for parsed extraction records.
 
-These are generic, reusable quality checks — missing fields, hedging
+These are generic, reusable quality checks (missing fields, hedging
 language, duplicate/overlapping fields, and self-validation bias in
-numbered confidence checks — that surface issues for human review rather
+numbered confidence checks) that surface issues for human review rather
 than silently accepting model output.
 """
 
@@ -62,12 +62,12 @@ def check_field_overlap(
 
 
 def check_self_validation_bias(parsed: dict[str, str], check_keys: list[str]) -> list[str]:
-    """Flag when every numbered confidence check answers affirmatively —
+    """Flag when every numbered confidence check answers affirmatively,
     a common sign of the model rubber-stamping its own output.
     """
     answers = [parsed.get(key, "").lower() for key in check_keys]
     if answers and all("yes" in a for a in answers):
-        return ["ALL CONFIDENCE CHECKS ARE YES — review for self-validation bias"]
+        return ["ALL CONFIDENCE CHECKS ARE YES: review for self-validation bias"]
     return []
 
 

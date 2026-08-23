@@ -1,7 +1,7 @@
 """Main orchestration entry point for the extraction pipeline.
 
 Loads input records, runs each through a chosen model, parses the
-completion into structured fields, validates it, and saves results —
+completion into structured fields, validates it, and saves results,
 resuming automatically if the output file already has partial results.
 
 Usage:

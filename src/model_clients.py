@@ -2,7 +2,7 @@
 
 Supports OpenAI, Anthropic, and any local OpenAI-compatible server (e.g.
 LM Studio, Ollama's OpenAI endpoint). API keys are always read from
-environment variables — never hard-coded.
+environment variables, never hard-coded.
 """
 
 from __future__ import annotations

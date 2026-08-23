@@ -5,7 +5,7 @@ and return them in exactly this plain-text format, one field per line:
 Subject: <the main entity or item this record is about>
 Context: <the setting or circumstances in which the event occurred>
 Situation: <a concise, factual description of the notable condition or problem observed>
-Root Cause: <the underlying cause, stated as a fact — do not hedge>
+Root Cause: <the underlying cause, stated as a fact, do not hedge>
 Outcome: <what actually happened as a direct result, stated as a fact>
 Recommended Action: <a concrete corrective or follow-up action>
 
@@ -23,5 +23,5 @@ Rules:
 - If a value must be inferred rather than read directly from the source,
   append "(inferred)" to the end of that field's value.
 - Keep each field to one or two sentences.
-- Do not restate the Situation field as the Outcome, or vice versa — they
+- Do not restate the Situation field as the Outcome, or vice versa; they
   must describe genuinely distinct aspects of the event.

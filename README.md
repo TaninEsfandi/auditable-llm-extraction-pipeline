@@ -12,7 +12,7 @@ Given a set of source documents, the pipeline:
    provider (OpenAI, Anthropic, or a local OpenAI-compatible server such as
    LM Studio).
 3. **Parses** the model's free-text completion into a flat, structured
-   record — tolerating markdown and formatting differences across providers.
+   record, tolerating markdown and formatting differences across providers.
 4. **Validates** each record against a set of quality checks (missing
    fields, hedging language, duplicate/overlapping fields, self-validation
    bias) and flags issues for human review instead of silently accepting
@@ -26,13 +26,13 @@ extraction can be traced back to exactly what the model said.
 ## Why this design
 
 - **Provider-agnostic**: swapping models is a config change, not a
-  rewrite — `src/model_clients.py` normalizes OpenAI, Anthropic, and local
+  rewrite: `src/model_clients.py` normalizes OpenAI, Anthropic, and local
   model calls behind one interface.
 - **Resilient to messy LLM output**: `src/parser.py` handles the same field
   being formatted inline, on its own line, in bold, or under a header,
   which is the norm across real model responses.
 - **Trust but verify**: `src/validator.py` treats the model as a fallible
-  extractor, not an oracle — it checks for hedging language, missing
+  extractor, not an oracle: it checks for hedging language, missing
   fields, duplicated content, and answers that all trend suspiciously
   affirmative.
 - **Crash-safe**: `src/pipeline.py` checkpoints after every record, so
@@ -67,10 +67,10 @@ python -m src.pipeline --input examples/sample_input.json --model openai
 
 Options:
 
-- `--model {openai,anthropic,local}` — which provider/model preset to use
-- `--output-dir DIR` — where to write results (default: `results/`)
-- `--prompt PATH` — use a custom system prompt
-- `--limit N` — only process the first N records (useful for smoke tests)
+- `--model {openai,anthropic,local}`: which provider/model preset to use
+- `--output-dir DIR`: where to write results (default: `results/`)
+- `--prompt PATH`: use a custom system prompt
+- `--limit N`: only process the first N records (useful for smoke tests)
 
 ## Testing
 
@@ -83,5 +83,5 @@ pytest tests/
 This project was extracted and generalized from a research pipeline
 originally built for analyzing FDA medical device adverse event reports.
 The extraction schema, prompt, and examples here are simplified and
-synthetic — they demonstrate the engineering pattern rather than reproduce
+synthetic, demonstrating the engineering pattern rather than reproducing
 any specific dataset or study results.
