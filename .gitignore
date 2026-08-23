@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.venv/
+.ipynb_checkpoints/
+*.log
+results/
+data/
+.pytest_cache/

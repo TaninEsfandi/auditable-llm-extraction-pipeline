@@ -1,0 +1,11 @@
+# Ingestion
+requests
+tqdm
+
+# Model providers
+openai
+anthropic
+python-dotenv
+
+# Testing
+pytest

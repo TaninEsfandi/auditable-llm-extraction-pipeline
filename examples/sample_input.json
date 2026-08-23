@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-001",
+    "title": "Conveyor sensor fault",
+    "description": "A proximity sensor on packaging line 3 stopped registering box positions after a firmware update, causing two boxes to collide at the merge point. Maintenance logs show the sensor's debounce interval was reset to a default value during the update.",
+    "reported_date": "2026-02-10"
+  },
+  {
+    "id": "example-002",
+    "title": "Battery pack overheating",
+    "description": "A handheld scanner's battery pack reached 61°C during a routine 8-hour shift, triggering an automatic shutdown. Investigation found a swollen cell in the pack, consistent with a manufacturing defect in that production batch.",
+    "reported_date": "2026-03-02"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "example-001",
+    "model_used": "gpt-4o-mini",
+    "raw_output": "Subject: Proximity sensor on packaging line 3\nContext: Firmware update applied to packaging line 3 equipment\nSituation: The sensor stopped registering box positions after the update\nRoot Cause: The firmware update reset the sensor's debounce interval to a default value\nOutcome: Two boxes collided at the merge point\nRecommended Action: Verify and restore debounce interval settings after any firmware update\n\n1. Yes — the reset debounce interval directly explains the sensor's failure to register positions.\n2. Yes — the sensor fault is directly connected to the box collision.\n3. Yes — the maintenance logs provide direct evidence for the root cause.",
+    "validation_issues": [],
+    "subject": "Proximity sensor on packaging line 3",
+    "context": "Firmware update applied to packaging line 3 equipment",
+    "situation": "The sensor stopped registering box positions after the update",
+    "root_cause": "The firmware update reset the sensor's debounce interval to a default value",
+    "outcome": "Two boxes collided at the merge point",
+    "recommended_action": "Verify and restore debounce interval settings after any firmware update",
+    "check_1": "Yes — the reset debounce interval directly explains the sensor's failure to register positions.",
+    "check_2": "Yes — the sensor fault is directly connected to the box collision.",
+    "check_3": "Yes — the maintenance logs provide direct evidence for the root cause."
+  }
+]
